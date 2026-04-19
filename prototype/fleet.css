@@ -1,0 +1,163 @@
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.fleet-hero {
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  align-items: end;
+  padding: 5.5rem 0 3.5rem;
+  background-image:
+    linear-gradient(120deg, rgba(13, 42, 74, 0.8), rgba(13, 42, 74, 0.48)),
+    url("assets/images/ics-fleet-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+
+.fleet-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 21, 38, 0.56), transparent 58%);
+}
+
+.fleet-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+}
+
+.btn-secondary-light {
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+}
+
+.btn-secondary-light:hover {
+  border-color: var(--ics-yellow);
+  color: var(--ics-yellow);
+}
+
+.fleet-gallery-section {
+  background: linear-gradient(180deg, #ffffff, #f4f8fd);
+}
+
+.fleet-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.fleet-photo-card {
+  position: relative;
+  min-height: 380px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(16, 32, 51, 0.12);
+}
+
+.fleet-photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fleet-photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(9, 24, 42, 0.86), rgba(9, 24, 42, 0.1) 55%, rgba(9, 24, 42, 0.02));
+}
+
+.fleet-photo-copy {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  padding: 1.2rem;
+  color: #ffffff;
+}
+
+.fleet-photo-copy .eyebrow {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.fleet-photo-copy h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.45rem;
+}
+
+.fleet-photo-copy p:last-child {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.fleet-photo-main {
+  min-height: 520px;
+}
+
+.fleet-capability-strip {
+  background: var(--ics-navy);
+}
+
+.fleet-capability-strip .section-head {
+  color: #ffffff;
+}
+
+.fleet-capability-strip .section-head p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.fleet-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.fleet-capability-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  color: #ffffff;
+}
+
+.fleet-capability-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.fleet-capability-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.fleet-cta {
+  background: #102c4d;
+}
+
+@media (max-width: 1050px) {
+  .fleet-gallery-grid,
+  .fleet-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fleet-photo-main {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 700px) {
+  .fleet-hero {
+    min-height: 62vh;
+    padding-top: 5rem;
+  }
+
+  .fleet-photo-card,
+  .fleet-photo-main {
+    min-height: 320px;
+  }
+}

@@ -1,0 +1,37 @@
+:root {
+  --ics-yellow: #f4bf00;
+  --ics-navy: #0d2a4a;
+  --ics-ink: #102033;
+  --ics-bg: #f7f9fc;
+}
+
+body {
+  font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+.wp-site-blocks {
+  overflow-x: clip;
+}
+
+a {
+  text-underline-offset: 2px;
+}
+
+.wp-block-site-title a {
+  text-decoration: none;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+  border: 2px solid currentColor;
+  border-radius: 999px;
+}
+
+.wp-block-cover .wp-block-post-title {
+  margin-bottom: 0.55rem;
+}
+
+@media (max-width: 781px) {
+  .wp-block-navigation__responsive-container-open {
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,162 @@
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+}
+
+.about-hero {
+  position: relative;
+  min-height: 62vh;
+  display: grid;
+  align-items: end;
+  padding: 5.5rem 0 3.5rem;
+  background-image:
+    linear-gradient(120deg, rgba(13, 42, 74, 0.88), rgba(13, 42, 74, 0.55)),
+    url("assets/images/ics-staff.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 21, 38, 0.58), transparent 58%);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.about-copy h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.about-image-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(16, 32, 51, 0.12);
+}
+
+.about-image-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.about-leadership {
+  background: var(--ics-bg);
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.leader-card,
+.location-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: 0 8px 24px rgba(16, 32, 51, 0.08);
+  border-top: 4px solid var(--ics-yellow);
+}
+
+.leader-card h3,
+.location-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.leader-card p,
+.location-card p {
+  margin: 0.25rem 0;
+  color: var(--ics-steel);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-community {
+  background: linear-gradient(180deg, #ffffff, #f6f9fd);
+}
+
+.community-panel {
+  background: var(--ics-navy);
+  color: #ffffff;
+  border-radius: var(--radius);
+  padding: 1.4rem;
+}
+
+.community-panel ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.community-panel li {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.about-cta {
+  background: #102c4d;
+}
+
+.about-cta .div-cta-inner {
+  max-width: 720px;
+}
+
+.about-cta h2 {
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.about-cta p {
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 1.2rem;
+}
+
+.about-cta .hero-actions {
+  justify-content: flex-start;
+}
+
+.btn-secondary-light {
+  border-color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+}
+
+.btn-secondary-light:hover {
+  border-color: var(--ics-yellow);
+  color: var(--ics-yellow);
+}
+
+@media (max-width: 1050px) {
+  .about-grid,
+  .leadership-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-cta .hero-actions {
+    justify-content: flex-start;
+  }
+}
