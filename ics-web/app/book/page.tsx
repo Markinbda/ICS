@@ -626,9 +626,12 @@ export default function BookPage() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-[#0d2a4a] pt-16 pb-10 text-white">
-        <div className="max-w-[1180px] mx-auto px-4">
+      {/* Hero with embedded step progress */}
+      <section
+        className="relative bg-[#0d2a4a] pt-16 pb-0 text-white"
+        style={{ backgroundImage: "linear-gradient(120deg,rgba(13,42,74,0.97),rgba(13,42,74,0.80)),url('/images/division-tires-hero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+      >
+        <div className="max-w-[1180px] mx-auto px-4 pb-10">
           <Link href="/divisions/tires" className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm mb-5 transition-colors">
             <ArrowLeft size={14} /> ICS Tires
           </Link>
@@ -636,40 +639,54 @@ export default function BookPage() {
             <Calendar size={20} className="text-[#f4bf00]" />
             <p className="text-xs font-bold uppercase tracking-[1.5px] text-white/60">Appointment Booking</p>
           </div>
-          <h1 className="font-[var(--font-heading)] text-3xl md:text-5xl font-black uppercase">Book a Tire Appointment</h1>
+          <h1 className="font-[var(--font-heading)] text-3xl md:text-5xl font-black uppercase mb-1">Book a Tire Appointment</h1>
+          <p className="text-white/60 text-sm mt-2">Select your service type, vehicle, and preferred time slot.</p>
+        </div>
+
+        {/* Yellow accent rule */}
+        <div className="h-1 bg-[#f4bf00]" />
+
+        {/* Step tracker bar – navy-dark strip */}
+        <div className="bg-[#091e35]">
+          <div className="max-w-[820px] mx-auto px-4 py-5">
+            <div className="flex items-center gap-0 overflow-x-auto">
+              {STEP_LABELS.map((s, i) => {
+                const Icon = s.icon;
+                const done = i < step;
+                const active = i === step;
+                return (
+                  <div key={i} className="flex items-center flex-shrink-0">
+                    <div className={`flex items-center gap-2 text-xs font-semibold transition-all ${active ? "text-[#f4bf00]" : done ? "text-white/90" : "text-white/35"}`}>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold border-2 transition-all ${active ? "bg-[#f4bf00] border-[#f4bf00] text-black" : done ? "bg-white/10 border-white/50 text-white" : "bg-transparent border-white/20 text-white/30"}`}>
+                        {done ? <Check size={14} /> : <Icon size={14} />}
+                      </div>
+                      <span className="hidden sm:block">{s.label}</span>
+                    </div>
+                    {i < STEP_LABELS.length - 1 && (
+                      <div className={`w-8 sm:w-16 h-0.5 mx-2 transition-all ${i < step ? "bg-[#f4bf00]/60" : "bg-white/15"}`} />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Wizard */}
-      <section className="py-12 bg-[#f7f9fc] min-h-[70vh]">
+      <section className="py-12 bg-[#f0f4fa] min-h-[70vh]">
         <div className="max-w-[820px] mx-auto px-4">
-          {/* Step indicator */}
-          <div className="flex items-center gap-0 mb-10 overflow-x-auto pb-2">
-            {STEP_LABELS.map((s, i) => {
-              const Icon = s.icon;
-              const done = i < step;
-              const active = i === step;
-              return (
-                <div key={i} className="flex items-center flex-shrink-0">
-                  <div className={`flex items-center gap-2 text-xs font-semibold transition-all ${active ? "text-[#102033]" : done ? "text-[#0d2a4a]" : "text-[#b0bcc9]"}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold transition-all ${active ? "bg-[#f4bf00] text-black" : done ? "bg-[#0d2a4a] text-white" : "bg-[#e8edf5] text-[#b0bcc9]"}`}>
-                      {done ? <Check size={14} /> : <Icon size={14} />}
-                    </div>
-                    <span className="hidden sm:block">{s.label}</span>
-                  </div>
-                  {i < STEP_LABELS.length - 1 && (
-                    <div className={`w-8 sm:w-12 h-0.5 mx-2 transition-all ${i < step ? "bg-[#0d2a4a]" : "bg-[#e8edf5]"}`} />
-                  )}
-                </div>
-              );
-            })}
-          </div>
 
           {/* Card */}
-          <div className="bg-white rounded-2xl p-8 border border-[#e8edf5] shadow-sm">
-            <h2 className="font-[var(--font-heading)] text-xl font-black uppercase text-[#102033] mb-6">
-              Step {step + 1}: {STEP_LABELS[step].label}
-            </h2>
+          <div className="bg-white rounded-2xl border border-[#e8edf5] shadow-md overflow-hidden">
+            {/* Card header stripe */}
+            <div className="bg-[#0d2a4a] px-8 py-4 flex items-center gap-3">
+              <div className="w-1.5 h-6 bg-[#f4bf00] rounded-full" />
+              <h2 className="font-[var(--font-heading)] text-lg font-black uppercase text-white">
+                Step {step + 1} of {STEP_LABELS.length} — {STEP_LABELS[step].label}
+              </h2>
+            </div>
+            <div className="p-8">
             {steps[step]}
 
             {/* Navigation */}
@@ -706,7 +723,8 @@ export default function BookPage() {
                 </button>
               )}
             </div>
-          </div>
+            </div>{/* /p-8 content */}
+          </div>{/* /card */}
         </div>
       </section>
     </>
