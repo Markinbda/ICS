@@ -1,2 +1,4 @@
 [build]
-  publish = "prototype"
+  base = "ics-web"
+  command = "npm run build"
+  publish = ".next"
