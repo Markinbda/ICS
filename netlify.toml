@@ -1,4 +1,3 @@
 [build]
-  base = "ics-web"
-  command = "npm run build"
-  publish = ".next"
+  command = "cd ics-web && npm run build"
+  publish = "ics-web/.next"
