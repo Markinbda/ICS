@@ -13,7 +13,7 @@
   padding: 5.5rem 0 3.5rem;
   background-image:
     linear-gradient(120deg, rgba(13, 42, 74, 0.8), rgba(13, 42, 74, 0.48)),
-    url("assets/images/ics-fleet-hero.jpg");
+    url("assets/images/fleet.png");
   background-size: cover;
   background-position: center;
   color: var(--white);
@@ -137,6 +137,26 @@
 
 .fleet-cta {
   background: #102c4d;
+  color: var(--white);
+  text-align: center;
+}
+
+.fleet-cta .div-cta-inner {
+  max-width: 640px;
+}
+
+.fleet-cta h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.fleet-cta p {
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1.2rem;
+}
+
+.fleet-cta .hero-actions {
+  justify-content: center;
 }
 
 @media (max-width: 1050px) {

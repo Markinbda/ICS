@@ -580,6 +580,12 @@ textarea {
   color: #f6c620;
 }
 
+.site-footer a.btn,
+.site-footer a.btn-primary,
+.site-footer a.btn-primary:hover {
+  color: #000000;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materials Orders | ICS Bermuda</title>
+  <meta name="description" content="Submit a material order to Island Quarry and ICS. Select materials, tonnage, truck size, and delivery details for Bermuda projects." />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="orders.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <a href="../index.html" class="brand-link">
+          <span class="brand-mark">ICS</span>
+          <span class="brand-text">Island Construction Services</span>
+        </a>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="../index.html#divisions">Our Divisions</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../orders/">Orders</a>
+        <a href="../fleet.html">Fleet</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../about.html">About</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="link-call" href="tel:+14412933224">Call Quarry 441-293-3224</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="orders-hero">
+      <div class="orders-hero-overlay"></div>
+      <div class="container orders-hero-content">
+        <a class="back-link" href="../index.html">&#8592; Back to homepage</a>
+        <p class="eyebrow">Material Order Form</p>
+        <h1>Order Quarry Materials for Bermuda Delivery</h1>
+        <p class="hero-copy">Place a material request with Island Quarry by sharing your quantity, truck size, and delivery details. The ICS team will confirm availability and scheduling.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#order-form">Start Your Order</a>
+          <a class="btn btn-secondary btn-secondary-light" href="tel:+14412933224">Call 441-293-3224</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order-section" id="order-form">
+      <div class="container order-layout">
+        <div class="order-form-card">
+          <div class="section-head">
+            <p class="eyebrow">Please Complete This Form</p>
+            <h2>Material Order Details</h2>
+            <p class="order-intro-copy">Build your full order in one message.</p>
+          </div>
+
+          <div class="order-emphasis" role="note" aria-label="How to submit multiple materials">
+            <strong>Add each material and tonnage to the virtual cart, then send one combined order email.</strong>
+          </div>
+
+          <form class="order-form" id="material-order-form" aria-label="Material order form">
+            <label>
+              Material
+              <select id="item-material" name="item-material">
+                <option value="">Select material</option>
+                <option>Sand</option>
+                <option>Screenings</option>
+                <option>5/8 Rock</option>
+                <option>Gabion Rock</option>
+                <option>Soil</option>
+                <option>Boulders</option>
+                <option>Mixed Aggregate Load</option>
+              </select>
+            </label>
+
+            <label>
+              Tonnage
+              <input type="number" id="item-tons" name="item-tons" min="0.5" step="0.5" placeholder="e.g. 10" />
+            </label>
+
+            <label>
+              Truck Size
+              <select id="item-truck" name="item-truck">
+                <option value="">Select truck size</option>
+                <option>Small Truck</option>
+                <option>Big Truck</option>
+              </select>
+            </label>
+
+            <label>
+              Item Notes (optional)
+              <input type="text" id="item-notes" name="item-notes" placeholder="Placement or handling notes" />
+            </label>
+
+            <div class="full item-action-row">
+              <button class="btn btn-secondary" type="button" id="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="full cart-panel" aria-live="polite">
+              <div class="cart-head">
+                <h3>Virtual Cart</h3>
+                <button class="cart-clear" type="button" id="clear-cart">Clear all</button>
+              </div>
+              <p class="cart-empty" id="cart-empty">No items added yet.</p>
+              <ul class="cart-list" id="cart-list"></ul>
+              <input type="hidden" id="cart-summary" name="cart-summary" />
+            </div>
+
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Full name" required />
+            </label>
+
+            <label>
+              Telephone
+              <input type="tel" name="telephone" placeholder="441-000-0000" required />
+            </label>
+
+            <label class="full">
+              Email for Billing
+              <input type="email" name="billing-email" placeholder="accounts@example.com" required />
+            </label>
+
+            <label class="full">
+              Delivery Address
+              <textarea name="delivery-address" rows="3" placeholder="Street, parish, site access details" required></textarea>
+            </label>
+
+            <label>
+              Preferred Delivery Date
+              <input type="date" name="delivery-date" />
+            </label>
+
+            <label>
+              Preferred Delivery Time
+              <select name="delivery-time">
+                <option value="">Flexible</option>
+                <option>Morning (7am - 11am)</option>
+                <option>Midday (11am - 2pm)</option>
+                <option>Afternoon (2pm - 5pm)</option>
+              </select>
+            </label>
+
+            <label class="full">
+              Suggestions / Notes
+              <textarea name="notes" rows="4" placeholder="Access instructions, placement notes, or anything else we should know"></textarea>
+            </label>
+
+            <label class="full check-row">
+              <input type="checkbox" name="confirm-access" required />
+              I confirm delivery access is suitable for the selected truck size.
+            </label>
+
+            <p class="full submit-note">Submitting will open your email app with all cart items in one draft message to ICS.</p>
+
+            <button class="btn btn-primary full" type="submit">Send Combined Order Email</button>
+
+            <p class="full form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="order-info" aria-label="Order support information">
+          <article class="info-card">
+            <h3>Need Help Choosing Materials?</h3>
+            <p>Call the Island Quarry team for practical guidance on quantity and product selection.</p>
+            <a class="btn btn-primary" href="tel:+14412933224">Call 441-293-3224</a>
+          </article>
+
+          <article class="info-card">
+            <h3>Quarry Contact</h3>
+            <ul>
+              <li><strong>Address:</strong> 9 Coney Island Road, Hamilton Parish</li>
+              <li><strong>Phone:</strong> <a href="tel:+14412933224">441-293-3224</a></li>
+              <li><strong>Email:</strong> <a href="mailto:info@ics.bm">info@ics.bm</a></li>
+              <li><strong>Hours:</strong> Mon - Sat, 7am - 4pm</li>
+            </ul>
+          </article>
+
+          <article class="info-card info-card-dark">
+            <h3>Common Materials</h3>
+            <div class="tag-grid" aria-label="Common material tags">
+              <span>Sand</span>
+              <span>Screenings</span>
+              <span>5/8 Rock</span>
+              <span>Gabion Rock</span>
+              <span>Soil</span>
+              <span>Boulders</span>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section orders-cta">
+      <div class="container orders-cta-inner">
+        <h2>Need materials urgently?</h2>
+        <p>For same-day scheduling options, call the quarry directly and the team will advise on availability.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+14412933224">Call Quarry Now</a>
+          <a class="btn btn-secondary btn-secondary-light" href="mailto:info@ics.bm">Email info@ics.bm</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Island Quarry Ltd.</h3>
+        <p>9 Coney Island Road, Hamilton Parish, Bermuda</p>
+        <p><a href="tel:+14412933224">441-293-3224</a> | <a href="mailto:info@ics.bm">info@ics.bm</a></p>
+        <p>Mon - Sat: 7am - 4pm</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../orders/">Materials Orders</a></li>
+          <li><a href="../fleet.html">Fleet</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Need urgent support?</h4>
+        <a class="btn btn-primary" href="tel:+14412363011">Tap to Call ICS</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="mobile-call" href="tel:+14412933224" aria-label="Call the quarry now">Call Quarry</a>
+  <script src="orders.js"></script>
+</body>
+</html>
