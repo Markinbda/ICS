@@ -68,7 +68,25 @@ const INITIAL: BookingState = {
 
 const CURRENT_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 26 }, (_, i) => CURRENT_YEAR - i);
-const MAKES = ["Toyota", "Honda", "Ford", "Nissan", "Mazda", "Mitsubishi", "Hyundai", "Kia", "Other"];
+const MAKES = [
+  "Toyota",
+  "Honda",
+  "Nissan",
+  "Mazda",
+  "Mitsubishi",
+  "Suzuki",
+  "Hyundai",
+  "Kia",
+  "BMW",
+  "Mercedes-Benz",
+  "Volkswagen",
+  "Renault",
+  "Peugeot",
+  "MG",
+  "Isuzu",
+  "UD Trucks",
+  "Other",
+];
 const PARISHES = ["City of Hamilton","Devonshire","Hamilton Parish","Paget","Pembroke","Sandys","Smith's","Southampton","St. George's","Warwick"];
 const TIME_WINDOWS = ["Morning (7am – 11am)","Midday (11am – 2pm)","Afternoon (2pm – 5pm)"];
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, Phone, Calendar } from "lucide-react";
+import { ArrowLeft, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "ICS Tires | ICS Group",
@@ -24,9 +24,6 @@ export default function TiresDivisionPage() {
           <h1 className="font-[var(--font-heading)] text-4xl md:text-6xl font-black uppercase leading-[1.02] mb-4">ICS Tires</h1>
           <p className="text-white/80 text-lg max-w-2xl">Over 20 years supplying quality tire brands to Bermuda. Passenger, commercial, and fleet tires from the world's most trusted names — with practical local service.</p>
           <div className="flex flex-wrap gap-3 mt-6">
-            <Link href="/book" className="inline-flex items-center gap-2 bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:shadow-[0_8px_22px_rgba(244,191,0,0.35)] hover:-translate-y-px transition-all">
-              <Calendar size={16} /> Book Appointment
-            </Link>
             <Link href="/#quote" className="border-2 border-white/50 text-white font-bold px-6 py-3 rounded-full hover:border-[#f4bf00] hover:text-[#f4bf00] transition-all">Enquire About Tires</Link>
             <a href="tel:+14412363011" className="inline-flex items-center gap-2 border-2 border-white/40 text-white font-bold px-6 py-3 rounded-full hover:border-[#f4bf00] hover:text-[#f4bf00] transition-all">
               <Phone size={16} /> 441-236-3011
@@ -45,9 +42,6 @@ export default function TiresDivisionPage() {
               <p className="text-[#4b5d73] mb-4 leading-relaxed">ICS Tires has been part of the Island Construction Services group for over two decades, supplying passenger, commercial, and heavy-duty tires to Bermuda residents and businesses.</p>
               <p className="text-[#4b5d73] leading-relaxed">We stock many of the top quality brands and can guide you to the right product for your vehicle, usage conditions, and budget. Whether you need a single replacement or fleet supply, the ICS Tires team is ready to help.</p>
               <div className="flex flex-wrap gap-3 mt-6">
-                <Link href="/book" className="inline-flex items-center gap-2 bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:shadow-[0_8px_22px_rgba(244,191,0,0.35)] hover:-translate-y-px transition-all">
-                  <Calendar size={16} /> Book Appointment
-                </Link>
                 <Link href="/#quote" className="border-2 border-[#0d2a4a] text-[#0d2a4a] font-bold px-6 py-3 rounded-full hover:-translate-y-px transition-all">Enquire Now</Link>
               </div>
             </div>
@@ -92,16 +86,7 @@ export default function TiresDivisionPage() {
         </div>
       </section>
 
-      {/* Booking CTA */}
-      <section className="py-20 bg-[#f4bf00]">
-        <div className="max-w-[1180px] mx-auto px-4 text-center">
-          <h2 className="font-[var(--font-heading)] text-3xl md:text-4xl font-black uppercase mb-4 text-[#102033]">Book a Tire Appointment Online</h2>
-          <p className="text-[#102033]/75 mb-8 max-w-xl mx-auto">Select your vehicle type, tire size, and preferred service type — in-store, roadside, or mobile installation.</p>
-          <Link href="/book" className="inline-flex items-center gap-2 bg-[#0d2a4a] text-white font-bold px-8 py-3.5 rounded-full hover:shadow-lg hover:-translate-y-px transition-all">
-            <Calendar size={16} /> Book Appointment →
-          </Link>
-        </div>
-      </section>
+
 
       {/* Location */}
       <section className="py-20">
@@ -130,9 +115,6 @@ export default function TiresDivisionPage() {
           <h2 className="font-[var(--font-heading)] text-3xl md:text-4xl font-black uppercase mb-4">Need tires in Bermuda?</h2>
           <p className="text-white/75 mb-8">Enquire now and the ICS Tires team will confirm availability and arrange a time.</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link href="/book" className="inline-flex items-center gap-2 bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:shadow-[0_8px_22px_rgba(244,191,0,0.35)] hover:-translate-y-px transition-all">
-              <Calendar size={16} /> Book Appointment
-            </Link>
             <a href="tel:+14412363011" className="inline-flex items-center gap-2 border-2 border-white/40 text-white font-bold px-6 py-3 rounded-full hover:border-[#f4bf00] hover:text-[#f4bf00] transition-all">
               <Phone size={16} /> Call ICS Tires
             </a>
