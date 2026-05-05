@@ -152,9 +152,14 @@ function Step2({ state, set }: { state: BookingState; set: (s: Partial<BookingSt
   }, [state.year, state.make, state.model, set]);
 
   useEffect(() => {
-    if (state.year && state.make && state.model) {
+    if (!state.year || !state.make || !state.model) return;
+
+    // Debounce lookups so typing/selecting does not retrigger search on every render.
+    const timer = setTimeout(() => {
       lookupFitment();
-    }
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, [state.year, state.make, state.model, lookupFitment]);
 
   const vehicleTypes: { type: VehicleType; label: string }[] = [
@@ -528,9 +533,9 @@ export default function BookPage() {
   const [submitError, setSubmitError] = useState("");
   const [confirmed, setConfirmed] = useState<{ id: string; scheduledStart: string } | null>(null);
 
-  function set(partial: Partial<BookingState>) {
+  const set = useCallback((partial: Partial<BookingState>) => {
     setState((prev) => ({ ...prev, ...partial }));
-  }
+  }, []);
 
   function canAdvance(): boolean {
     switch (step) {
