@@ -14,7 +14,7 @@ export default function QuarryDivisionPage() {
       {/* Hero */}
       <section
         className="relative min-h-[56vh] flex items-end pb-14 pt-24 text-white"
-        style={{ backgroundImage: "linear-gradient(120deg,rgba(13,42,74,0.92),rgba(13,42,74,0.6)),url('/images/division-quarry-hero.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: "linear-gradient(120deg,rgba(13,42,74,0.82),rgba(13,42,74,0.5)),url('/images/quarry.png')", backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <div className="relative z-10 max-w-[1180px] mx-auto px-4 w-full">
           <Link href="/" className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm mb-5 transition-colors">
