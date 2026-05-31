@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "Fleet", href: "/fleet" },
   { label: "Orders", href: "/orders" },
-  { label: "Book Appointment", href: "/book" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
   { label: "My Account", href: "/account" },

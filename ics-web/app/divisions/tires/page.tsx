@@ -103,7 +103,7 @@ export default function TiresDivisionPage() {
               </ul>
             </div>
             <div className="bg-[#f7f9fc] rounded-2xl p-7 border border-[#e8edf5]">
-              <p className="text-[#4b5d73] leading-relaxed">Come in and speak to the ICS Tires team about the right product for your vehicle. Bulk and fleet enquiries welcome — contact us for pricing. You can also book a service appointment online for tire replacement, repair, rotation, or balancing.</p>
+              <p className="text-[#4b5d73] leading-relaxed">Come in and speak to the ICS Tires team about the right product for your vehicle. Bulk and fleet enquiries welcome — contact us for pricing. Visit our workshop at 79 Middle Rd, Devonshire for tire replacement, repair, rotation, or balancing.</p>
             </div>
           </div>
         </div>

@@ -48,7 +48,6 @@ export default function Footer() {
               { label: "Our Divisions", href: "/#divisions" },
               { label: "Fleet", href: "/fleet" },
               { label: "Materials Orders", href: "/orders" },
-              { label: "Book Appointment", href: "/book" },
               { label: "About ICS", href: "/about" },
               { label: "Request a Quote", href: "/#quote" },
             ].map((l) => (

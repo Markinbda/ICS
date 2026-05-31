@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Phone, Calendar } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
@@ -61,9 +61,6 @@ export default function HomePage() {
           <div className="flex flex-wrap gap-3 mb-8">
             <Link href="/#quote" className="bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:shadow-[0_8px_22px_rgba(244,191,0,0.35)] hover:-translate-y-px transition-all">
               Request a Quote
-            </Link>
-            <Link href="/book" className="flex items-center gap-2 border-2 border-white/60 text-white font-bold px-6 py-3 rounded-full hover:border-[#f4bf00] hover:text-[#f4bf00] transition-all">
-              <Calendar size={16} /> Book Appointment
             </Link>
             <Link href="/#services" className="border-2 border-white/40 text-white font-bold px-6 py-3 rounded-full hover:border-white transition-all">
               Our Services
@@ -146,7 +143,7 @@ export default function HomePage() {
               { title: "Crane and Heavy Equipment", desc: "Safe lifting operations with experienced operators and reliable equipment access.", href: "/#quote", cta: "Request service" },
               { title: "Container and Haulage", desc: "Efficient transport logistics for materials, equipment, and container movement.", href: "/#quote", cta: "Request service" },
               { title: "Aggregates and Quarry", desc: "Sand, screenings, 5/8 rock, soil, and associated aggregate products island-wide.", href: "/orders", cta: "Order materials" },
-              { title: "ICS Tires", desc: "Commercial and heavy-duty tire sales from trusted brands with local support.", href: "/book", cta: "Book appointment" },
+              { title: "ICS Tires", desc: "Commercial and heavy-duty tire sales from trusted brands with local support.", href: "/divisions/tires", cta: "Learn more" },
               { title: "Environmental and Specialist", desc: "Asbestos abatement, mould removal, and specialist site services with compliance focus.", href: "/#quote", cta: "Request service" },
             ].map((s) => (
               <article key={s.title} className="bg-white rounded-2xl p-6 shadow-sm border border-[#e8edf5] hover:shadow-md hover:-translate-y-px transition-all">
@@ -177,9 +174,9 @@ export default function HomePage() {
             </div>
             <div className="grid gap-3">
               {[
-                { img: "/images/fleet-panel-cranes.jpg", label: "Cranes & Lifting", desc: "Mobile cranes and experienced operators" },
+                { img: "/images/division-construction-hero.jpg", label: "Cranes & Lifting", desc: "Mobile cranes and experienced operators" },
                 { img: "/images/fleet-panel-haulage.jpg", label: "Haulage", desc: "Container and heavy-load transport" },
-                { img: "/images/fleet-panel-excavation.jpg", label: "Excavation", desc: "Site prep, trenching, demolition" },
+                { img: "/images/fleet-panel-cranes.jpg", label: "Excavation", desc: "Site prep, trenching, demolition" },
               ].map((p) => (
                 <div key={p.label} className="relative rounded-xl overflow-hidden h-28" style={{ backgroundImage: `linear-gradient(90deg,rgba(13,42,74,0.8),rgba(13,42,74,0.3)),url('${p.img}')`, backgroundSize: "cover", backgroundPosition: "center" }}>
                   <div className="absolute inset-0 flex items-center px-5">
@@ -229,9 +226,6 @@ export default function HomePage() {
                 <a href="tel:+14412363011" className="inline-flex items-center gap-2 border-2 border-white/40 text-white font-bold px-5 py-2.5 rounded-full hover:border-[#f4bf00] hover:text-[#f4bf00] transition-all">
                   <Phone size={16} /> Call 441-236-3011
                 </a>
-                <Link href="/book" className="inline-flex items-center gap-2 border-2 border-white/40 text-white font-bold px-5 py-2.5 rounded-full hover:border-[#f4bf00] hover:text-[#f4bf00] transition-all">
-                  <Calendar size={16} /> Book Appointment
-                </Link>
               </div>
             </div>
             <form className="bg-white/5 border border-white/15 rounded-2xl p-7 grid grid-cols-1 sm:grid-cols-2 gap-4" aria-label="Request a quote form">

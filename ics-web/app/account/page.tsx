@@ -141,8 +141,7 @@ export default function AccountPage() {
             <h1 className="font-[var(--font-heading)] text-4xl md:text-5xl font-black uppercase leading-[1.02]">Welcome back, {customer.name.split(" ")[0]}.</h1>
             <p className="mt-4 text-white/80 text-lg max-w-2xl">Everything here is built to keep you cared for, informed, and connected across the wider ICS family of businesses. Your portal is not just a ledger. It is your service memory, rewards wallet, and care plan in one place.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/book" className="bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:-translate-y-px transition-all">Book Tire Service</Link>
-              <Link href="/orders" className="border-2 border-white/40 text-white font-bold px-6 py-3 rounded-full hover:border-[#f4bf00] hover:text-[#f4bf00] transition-all">Order Quarry Materials</Link>
+              <Link href="/orders" className="bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:-translate-y-px transition-all">Order Quarry Materials</Link>
             </div>
           </div>
           <div className="bg-white/8 backdrop-blur-sm border border-white/12 rounded-[28px] p-6">
@@ -303,10 +302,10 @@ export default function AccountPage() {
             <div>
               <p className="text-xs uppercase tracking-[1.5px] text-white/55 font-bold">Always looked after</p>
               <h2 className="font-[var(--font-heading)] text-3xl font-black uppercase mt-2">Need us to take the next step for you?</h2>
-              <p className="text-white/72 mt-3 max-w-2xl">Book tire service, submit a materials order, or talk to the team. The goal is simple: make customers feel remembered and well cared for every time they return.</p>
+              <p className="text-white/72 mt-3 max-w-2xl">Submit a materials order or talk to the team. The goal is simple: make customers feel remembered and well cared for every time they return.</p>
             </div>
-            <Link href="/book" className="inline-flex items-center justify-center gap-2 bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:-translate-y-px transition-all">
-              Book Next Visit <ArrowRight size={16} />
+            <Link href="/orders" className="inline-flex items-center justify-center gap-2 bg-[#f4bf00] text-black font-bold px-6 py-3 rounded-full hover:-translate-y-px transition-all">
+              Place an Order <ArrowRight size={16} />
             </Link>
           </div>
         </div>
