@@ -73,7 +73,6 @@ export default function AboutPage() {
               { name: "Michael DeSilva", role: "Trenching and Asbestos Abatement" },
               { name: "Zane DeSilva Jr.", role: "Administration Officer" },
               { name: "Blake DeSilva", role: "Operations" },
-              { name: "Barbara Phillips", role: "Administration" },
             ].map((l) => (
               <article key={l.name} className="bg-white rounded-2xl p-5 border border-[#e8edf5] shadow-sm">
                 <div className="w-10 h-10 rounded-full bg-[#0d2a4a] flex items-center justify-center text-white font-[var(--font-heading)] font-black text-base mb-3">
