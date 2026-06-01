@@ -70,8 +70,8 @@ export default function AboutPage() {
               { name: "Allan DeSilva", role: "Senior Vice President" },
               { name: "Stephen Moniz", role: "Vice President" },
               { name: "Joanne DeSilva", role: "Senior Administration Officer" },
-              { name: "Michael DeSilva", role: "Trenching and Asbestos Abatement" },
-              { name: "Zane DeSilva Jr.", role: "Administration Officer" },
+              { name: "Michael DeSilva", role: "Executive Vice President" },
+              { name: "Zane DeSilva Jr.", role: "Executive Vice President" },
               { name: "Blake DeSilva", role: "Operations" },
             ].map((l) => (
               <article key={l.name} className="bg-white rounded-2xl p-5 border border-[#e8edf5] shadow-sm">
